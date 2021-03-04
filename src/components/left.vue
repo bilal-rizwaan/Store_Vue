@@ -10,6 +10,9 @@
                 <li>{{data.username}}</li>
                 <li>{{data.age}}</li>
                 <li>{{data.email}}</li>
+                <li>{{data.user}}</li>
+                <li>{{data.ages}}</li>
+                <li>{{data.emails}}</li>
             </ul>
 
             <!-- \*
