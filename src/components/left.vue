@@ -2,14 +2,16 @@
     <div>
         <div class="left">
             <div class="product" @click="product()" > 
-                <!-- @click="$store.commit('toggleDrawer')" -->
                 <p><span>Qty:{{shows}}</span></p>
                 <img src="../assets/1.jpg" alt="">
                 <h3>$2500</h3>
             </div>
+
+            <!-- \*
             <h1>Add :{{count}}</h1> 
             <button @click="increment">Add</button>
             <button @click="decrement">Dec</button>
+            */ -->
         </div>
     </div>
 </template>
@@ -27,28 +29,32 @@ export default {
     mounted(){
         this.product();
     },
-    computed:{
-        count() {
-            return this.$store.state.count
-        }
-    },
-    methods:{
-        product:function(){
-            this.shows++;
-            console.log(this.shows);
-        },
+    /*
+    // computed:{
+    //     count() {
+    //         return this.$store.state.count
+    //     }
+    // },
+    // methods:{
+    //     product:function(){
+    //         this.shows++;
+    //         console.log(this.shows);
+    //     },
 
-        increment () {
-            this.$store.dispatch('increment')
-        },
+    //     increment () {
+    //         this.$store.dispatch('increment')
+    //     },
 
-        decrement () {
-            this.$store.dispatch('decrement')
-        },
+    //     decrement () {
+    //         this.$store.dispatch('decrement')
+    //     },
 
         
     
-    },
+    // },
+    */
+
+
     }
     
 </script>
