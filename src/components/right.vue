@@ -1,6 +1,11 @@
 <template>
     <div>
-        <div class="right"></div>
+        <div class="right">
+            <ul v-for="data in listdata" :key="data" @click="$emit('clickedItem',data)">
+                <!-- <li>{{data}}</li> -->
+                <li>{{data}}</li>
+            </ul>
+        </div>
     </div>
 </template>
 <script>
@@ -9,6 +14,7 @@
 
 export default {
     name:'right',
+    props:['listdata']
 }
 </script>
 <style scoped>

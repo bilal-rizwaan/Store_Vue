@@ -6,9 +6,7 @@ const store = new Vuex.Store({
             username:'john',
             age:21,
             email:'john@gmail.com',
-            user:'gege',
-            ages:26,
-            emails:'jgeg@gmail.com'
+            
         }
     },
 

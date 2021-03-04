@@ -1,8 +1,8 @@
 <template>
     <div>
       <div class="wrapper">
-        <right></right>
-        <left></left> 
+        <right :listdata="list" @clickedItem='clicked'></right>
+        <left>{{patch}}</left> 
       </div>
     </div>
 </template>
@@ -19,30 +19,24 @@ export default {
     right,
     left,
   },
-
-
-
-
   data(){
     return{
-      // drawer: this.$store.state.drawer
+      list:[1,2,3,4,5],
+      patch:[]
     }
   },
+  methods:{
+    clicked(value){
+      this.patch.push(value);
+
+    }
+  }
 
 
 
 
 
-  // computed: {
-  //           drawers: {
-  //               get () {
-  //                   return this.$store.state.drawer
-  //               },
-  //               set (value) {
-  //                   this.$store.commit('toggleDrawer', value)
-  //               }
-  //           }
-  //       },
+
 }
 </script>
 

@@ -1,20 +1,17 @@
 <template>
     <div>
         <div class="left">
-            <div class="product" @click="product()" > 
+            <div class="product" @click="product()"> 
                 <p><span>Qty:{{shows}}</span></p>
                 <img src="../assets/1.jpg" alt="Dummy Img">
-                <h3>$2500</h3>
+                <h3>$3500</h3>
             </div>
             <ul v-for="data in $store.state" v-bind:key="data.id">
                 <li>{{data.username}}</li>
                 <li>{{data.age}}</li>
                 <li>{{data.email}}</li>
-                <li>{{data.user}}</li>
-                <li>{{data.ages}}</li>
-                <li>{{data.emails}}</li>
             </ul>
-
+            
             <!-- \*
             <h1>Add :{{count}}</h1> 
             <button @click="increment">Add</button>
