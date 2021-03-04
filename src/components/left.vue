@@ -3,9 +3,14 @@
         <div class="left">
             <div class="product" @click="product()" > 
                 <p><span>Qty:{{shows}}</span></p>
-                <img src="../assets/1.jpg" alt="">
+                <img src="../assets/1.jpg" alt="Dummy Img">
                 <h3>$2500</h3>
             </div>
+            <ul v-for="data in $store.state" v-bind:key="data.id">
+                <li>{{data.username}}</li>
+                <li>{{data.age}}</li>
+                <li>{{data.email}}</li>
+            </ul>
 
             <!-- \*
             <h1>Add :{{count}}</h1> 
@@ -27,34 +32,19 @@ export default {
         }
     },
     mounted(){
-        this.product();
+        this.product(),
+        console.log(this.$store.state.user)
+        // console.log(this.$store.state.user.age)
     },
-    /*
-    // computed:{
-    //     count() {
-    //         return this.$store.state.count
-    //     }
-    // },
-    // methods:{
-    //     product:function(){
-    //         this.shows++;
-    //         console.log(this.shows);
-    //     },
-
-    //     increment () {
-    //         this.$store.dispatch('increment')
-    //     },
-
-    //     decrement () {
-    //         this.$store.dispatch('decrement')
-    //     },
-
-        
+    computed:{
     
-    // },
-    */
-
-
+    },
+    methods:{
+        product:function(){
+            this.shows++;
+            console.log(this.shows);
+        },    
+    },
     }
     
 </script>
